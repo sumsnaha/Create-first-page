@@ -4,12 +4,12 @@ app.get('/', function(req, res){
 	res.send('Hello Sumsun, your website is working');
 });
 
-var server = app.listen(8081, function () {
+var server = app.listen(3000, function () {
 
-  var host = server.address('http://preview.i9jupc6ek10dx6r0sweafqimhsvpldi320qg47b76bqehfr.box.codeanywhere.com').address;
-  var port = server.address('http://preview.i9jupc6ek10dx6r0sweafqimhsvpldi320qg47b76bqehfr.box.codeanywhere.com').port;
+  var host = server.address().address;
+  var port = server.address().port;
 
-  console.log("Example app listening at http://preview.i9jupc6ek10dx6r0sweafqimhsvpldi320qg47b76bqehfr.box.codeanywhere.com:8081/", host, port);
+  console.log("Example app listening at http://%s:%s", host, port);
 
 });
 
