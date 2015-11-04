@@ -1,10 +1,16 @@
 var express = require('express');
 var app = express();
-app.get('/', function(req, res){
-	res.send('Hello Sumsun, your website is working');
+var fs = require("fs");
+
+app.get('/index.json', function(req, res){
+	fs.readFile( "CA GH First pages" + "/" + "index.json", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
 });
 
-var server = app.listen(3000, function () {
+	
+  var server = app.listen(3000, function () {
 
   var host = server.address().address;
   var port = server.address().port;
