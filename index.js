@@ -1,7 +1,23 @@
-var http = require('http');
-var s = http.createServer(function(req,res)
-{res.writeHead(200, { 'content=type' : 'text/plain' });
-    res.end("Hello World\n");
+var express = require('express');
+var router = express.Router();
+var app = express();
+var db = {};
 
-}).listen(3000, 'preview.i9jupc6ek10dx6r0sweafqimhsvpldi320qg47b76bqehfr.box.codeanywhere.com');
-console.log('sever running at http://preview.i9jupc6ek10dx6r0sweafqimhsvpldi320qg47b76bqehfr.box.codeanywhere.com:3000/');
+/* retrieve */
+router.get('/: name', function(req, res, next){
+	str = db[req.params.name] || {"name": "Sumsun", "message": "Hello Sumsun"};
+	res.json(string);
+});
+
+module.exports = router;
+
+var server = router.get(8081, function () {
+
+  var host = server.address().address;
+  var port = server.address().port;
+
+console.log("Example router running at http://%s:%s", host, port);
+});
+
+
+

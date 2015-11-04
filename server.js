@@ -3,7 +3,7 @@ var app = express();
 var fs = require("fs");
 
 app.get('/index.json', function(req, res){
-	fs.readFile( "CA GH First pages" + "/" + "index.json", 'utf8', function (err, data) {
+	fs.readFile( __dirname + "/" + "index.json", 'utf8', function (err, data) {
        console.log( data );
        res.end( data );
    });
