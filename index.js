@@ -11,7 +11,7 @@ router.get('/: name', function(req, res, next){
 
 module.exports = router;
 
-var server = router.get(8081, function () {
+var server = router.get(3000, function () {
 
   var host = server.address().address;
   var port = server.address().port;
