@@ -2,7 +2,7 @@
    "user1" : {
       "name" : "Sumsun",
 	   "message" : "Hello Sumsun"
-	  "password" : "password1",
+	  "password" : "sum1234",
 	  "profession" : "teacher",
 	  "id": 1
-   },
+   }
