@@ -1,18 +1,23 @@
-var express = require('express');
-var app = express();
+var http = require('http');
+ var server = http.createServer(function(req, res) {
 
-// This responds with "Hello World" on the homepage
-app.get('/', function (req, res) {
-   console.log("Got a GET request for the homepage");
-   res.send('Hello Sumsun,');
-});
 
-var server = app.listen(3000, function () {
+ if(req.method == POST && req.url == 'http://sumsnaha.github.io/Create-first-page/server.js/login') {
 
-  var host = server.address().address;
-  var port = server.address().port;
 
-  console.log("Example app listening at http://%s:%s", host, port);
+ var body = "Message";
 
-});
+ req.on('Hello github, thanks to give huge opportunity to do code', function (chunk) {
+ body += chunk;
+  });
 
+
+ req.on('end', function () {
+ console.log(body);
+ });
+
+ }
+
+ });
+ server.listen(80);
+ console.log("Server running at http://sumsnaha.github.io/Create-first-page/server.js:80");
